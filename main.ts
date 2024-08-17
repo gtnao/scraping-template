@@ -4,6 +4,7 @@ import { writeCSVSample } from "./src/csv.js";
 import { extractSample } from "./src/extract.js";
 import { fetchSample } from "./src/fetch.js";
 import { readHTMLSample, writeHTMLSample } from "./src/file.js";
+import { sleep } from "./src/utils.js";
 
 dotenv.config();
 // Example
@@ -11,6 +12,7 @@ dotenv.config();
 
 async function load() {
   const data = await fetchSample();
+  await sleep(1000);
   await writeHTMLSample(data);
   console.log("Data loaded");
 }
