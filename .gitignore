@@ -131,6 +131,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+.env
+
 data/html/*
 data/csv/*
 !data/html/.keep

@@ -1,7 +1,13 @@
+import dotenv from "dotenv";
+
 import { writeCSVSample } from "./src/csv.js";
 import { extractSample } from "./src/extract.js";
 import { fetchSample } from "./src/fetch.js";
 import { readHTMLSample, writeHTMLSample } from "./src/file.js";
+
+dotenv.config();
+// Example
+// const session = process.env.SESSION ?? "";
 
 async function load() {
   const data = await fetchSample();
